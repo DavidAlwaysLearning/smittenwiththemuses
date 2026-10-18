@@ -2,7 +2,7 @@
 (function () {
   var pages = [
     { href: "/", label: "Album" },
-    { href: "https://music.apple.com/us/album/smitten-with-the-muses/839652860", label: "Apple Music", blank: true },
+    { href: "https://music.apple.com/us/album/smitten-with-the-muses/839652860?ls=1", label: "Apple Music", blank: true },
     { href: "https://open.spotify.com/album/4dFca0jJcTbgbZEPO2EU0A", label: "Spotify", blank: true },
     { href: "https://lackadaisicalperfection.com/scores/", label: "Scores", blank: true }
   ];
