@@ -2,7 +2,7 @@
    Computers keep opening them in a new window. Runs on its own, before the menu code, and also catches
    links the menu adds later (checked again at tap time). */
 (function () {
-  var stores = ["open.spotify.com", "music.apple.com", "music.youtube.com"];
+  var stores = ["open.spotify.com", "music.apple.com", "music.youtube.com", "soundcloud.com"];
   var redirects = ["/spotify/", "/apple/", "/youtube-music/"];
 
   function isPhone() {
