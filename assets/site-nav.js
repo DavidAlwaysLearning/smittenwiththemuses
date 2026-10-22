@@ -132,7 +132,7 @@
     { title: "Clean Calm Piano", href: "https://cleancalmpiano.com/", host: "cleancalmpiano.com", slug: "clean-calm-piano" },
     { title: "Tantalizing Proof", href: "https://tantalizingproof.com/", host: "tantalizingproof.com", slug: "tantalizing-proof" },
     { title: "Piano In Colors", href: "https://pianoincolors.com/", host: "pianoincolors.com", slug: "piano-in-colors" },
-    { title: "Melodic Subtlety – Solo Piano", href: "https://melodicsubtlety.com/", host: "melodicsubtlety.com", slug: "melodic-subtlety" }
+    { title: "Melodic Subtlety – Piano", href: "https://melodicsubtlety.com/", host: "melodicsubtlety.com", slug: "melodic-subtlety" }
   ];
 
   function currentAlbumHost() {
