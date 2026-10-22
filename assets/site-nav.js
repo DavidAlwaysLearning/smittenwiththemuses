@@ -53,6 +53,8 @@
     { href: "/", label: "Album" },
     { href: "https://music.apple.com/us/album/smitten-with-the-muses/839652860?ls=1", label: "Apple Music", blank: true },
     { href: "https://open.spotify.com/album/4dFca0jJcTbgbZEPO2EU0A", label: "Spotify", blank: true },
+    { href: "https://www.facebook.com/pianoincolors", label: "Facebook", blank: true, ariaLabel: "David and his Piano on Facebook" },
+    { href: "https://www.instagram.com/pianodavid1492/", label: "Instagram", blank: true, ariaLabel: "David Rivera on Instagram" },
     { href: "https://lackadaisicalperfection.com/scores/", label: "Scores", blank: true }
   ];
 
@@ -112,6 +114,7 @@
     var link = document.createElement("a");
     link.href = page.href;
     link.textContent = page.label;
+    if (page.ariaLabel) link.setAttribute("aria-label", page.ariaLabel);
     if (page.blank) {
       link.target = "_blank";
       link.rel = "noopener";
