@@ -24,134 +24,168 @@
 <meta name="twitter:image:alt" content="Cover of Smitten with the Muses by David Rivera: a sketched piano and music staff in bright color">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "MusicAlbum",
- "name": "Smitten with the Muses",
- "url": "https://smittenwiththemuses.com/",
- "image": "https://smittenwiththemuses.com/assets/smitten-with-the-muses-cover.jpg",
- "byArtist": {
-  "@type": "Person",
-  "name": "David Rivera",
-  "sameAs": [
-   "https://open.spotify.com/artist/5qoC4NXvjfV3cylbXALzV3",
-   "https://music.apple.com/us/artist/david-rivera/1325691064",
-   "https://www.facebook.com/pianoincolors",
-   "https://www.instagram.com/pianodavid1492/"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://lackadaisicalperfection.com/about/#david-rivera",
+      "name": "David Rivera",
+      "jobTitle": "American composer",
+      "description": "David Rivera is an American composer of piano-led instrumental music. He plays and samples every instrument on his recordings himself. He is a member of ASCAP.",
+      "url": "https://lackadaisicalperfection.com/about/",
+      "nationality": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "ASCAP",
+        "url": "https://www.ascap.com/"
+      },
+      "affiliation": {
+        "@id": "https://lackadaisicalperfection.com/about/#subtlety-media"
+      },
+      "sameAs": [
+        "https://open.spotify.com/artist/5qoC4NXvjfV3cylbXALzV3",
+        "https://music.apple.com/us/artist/david-rivera/1325691064",
+        "https://x.com/melodicsubtlety",
+        "https://www.facebook.com/pianoincolors",
+        "https://www.instagram.com/pianodavid1492/",
+        "https://www.pandora.com/artist/david-rivera/ARXtg47gfjlv3nJ",
+        "https://www.youtube.com/channel/UCDqZ1e9Ur4PHynEylN_mJDg"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://lackadaisicalperfection.com/about/#subtlety-media",
+      "name": "Subtlety Media, LLC",
+      "url": "https://lackadaisicalperfection.com/about/"
+    },
+    {
+      "@type": "MusicAlbum",
+      "name": "Smitten with the Muses",
+      "url": "https://smittenwiththemuses.com/",
+      "image": "https://smittenwiththemuses.com/assets/smitten-with-the-muses-cover.jpg",
+      "byArtist": {
+        "@id": "https://lackadaisicalperfection.com/about/#david-rivera"
+      },
+      "datePublished": "2014",
+      "numTracks": 16,
+      "genre": [
+        "Solo piano",
+        "Neoclassical"
+      ],
+      "sameAs": [
+        "https://music.apple.com/us/album/smitten-with-the-muses/839652860",
+        "https://open.spotify.com/album/4dFca0jJcTbgbZEPO2EU0A"
+      ],
+      "description": "Sixteen pieces for the days the muses stay. A beguiling dance, a loquacious daydream, pure freedom. Tranquil Wisdom is the short one that still holds a scene.",
+      "recordLabel": {
+        "@id": "https://lackadaisicalperfection.com/about/#subtlety-media"
+      },
+      "track": [
+        {
+          "@type": "MusicRecording",
+          "position": 1,
+          "name": "Flowing Spontaneity",
+          "duration": "PT4M14S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 2,
+          "name": "Flying Freedom",
+          "duration": "PT3M41S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 3,
+          "name": "Beguiling Dance",
+          "duration": "PT3M25S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 4,
+          "name": "Tranquil Wisdom",
+          "duration": "PT2M44S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 5,
+          "name": "Pure Intentions",
+          "duration": "PT2M35S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 6,
+          "name": "Searching Truth",
+          "duration": "PT2M42S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 7,
+          "name": "Cautious Belief",
+          "duration": "PT3M22S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 8,
+          "name": "Unforgettable Disquiet",
+          "duration": "PT2M50S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 9,
+          "name": "Playful Trek",
+          "duration": "PT3M58S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 10,
+          "name": "Happy Reawakening",
+          "duration": "PT3M10S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 11,
+          "name": "Loquacious Daydream",
+          "duration": "PT9M47S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 12,
+          "name": "Loony Joyfulness",
+          "duration": "PT2M2S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 13,
+          "name": "Indelible Memory",
+          "duration": "PT2M24S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 14,
+          "name": "Fantastical Present",
+          "duration": "PT4M47S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 15,
+          "name": "Dark Divinity",
+          "duration": "PT6M25S"
+        },
+        {
+          "@type": "MusicRecording",
+          "position": 16,
+          "name": "Pure Freedom",
+          "duration": "PT3M16S"
+        }
+      ],
+      "publisher": {
+        "@id": "https://lackadaisicalperfection.com/about/#subtlety-media"
+      }
+    }
   ]
- },
- "datePublished": "2014",
- "numTracks": 16,
- "genre": [
-  "Solo piano",
-  "Neoclassical"
- ],
- "sameAs": [
-  "https://music.apple.com/us/album/smitten-with-the-muses/839652860",
-  "https://open.spotify.com/album/4dFca0jJcTbgbZEPO2EU0A"
- ],
- "description": "Sixteen pieces for the days the muses stay. A beguiling dance, a loquacious daydream, pure freedom. Tranquil Wisdom is the short one that still holds a scene.",
- "recordLabel": {
-  "@type": "Organization",
-  "name": "Subtlety Media, LLC"
- },
- "track": [
-  {
-   "@type": "MusicRecording",
-   "position": 1,
-   "name": "Flowing Spontaneity",
-   "duration": "PT4M14S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 2,
-   "name": "Flying Freedom",
-   "duration": "PT3M41S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 3,
-   "name": "Beguiling Dance",
-   "duration": "PT3M25S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 4,
-   "name": "Tranquil Wisdom",
-   "duration": "PT2M44S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 5,
-   "name": "Pure Intentions",
-   "duration": "PT2M35S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 6,
-   "name": "Searching Truth",
-   "duration": "PT2M42S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 7,
-   "name": "Cautious Belief",
-   "duration": "PT3M22S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 8,
-   "name": "Unforgettable Disquiet",
-   "duration": "PT2M50S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 9,
-   "name": "Playful Trek",
-   "duration": "PT3M58S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 10,
-   "name": "Happy Reawakening",
-   "duration": "PT3M10S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 11,
-   "name": "Loquacious Daydream",
-   "duration": "PT9M47S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 12,
-   "name": "Loony Joyfulness",
-   "duration": "PT2M2S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 13,
-   "name": "Indelible Memory",
-   "duration": "PT2M24S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 14,
-   "name": "Fantastical Present",
-   "duration": "PT4M47S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 15,
-   "name": "Dark Divinity",
-   "duration": "PT6M25S"
-  },
-  {
-   "@type": "MusicRecording",
-   "position": 16,
-   "name": "Pure Freedom",
-   "duration": "PT3M16S"
-  }
- ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
