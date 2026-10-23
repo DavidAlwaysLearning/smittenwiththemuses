@@ -55,7 +55,8 @@
     { href: "https://open.spotify.com/album/4dFca0jJcTbgbZEPO2EU0A", label: "Spotify", blank: true },
     { href: "https://www.facebook.com/pianoincolors", label: "Facebook", blank: true, ariaLabel: "David and his Piano on Facebook" },
     { href: "https://www.instagram.com/pianodavid1492/", label: "Instagram", blank: true, ariaLabel: "David Rivera on Instagram" },
-    { href: "https://lackadaisicalperfection.com/scores/", label: "Scores", blank: true }
+    { href: "https://lackadaisicalperfection.com/scores/", label: "Scores", blank: true },
+    { href: "https://lackadaisicalperfection.com/about/", label: "About", blank: true }
   ];
 
   function normalize(path) {
@@ -143,14 +144,14 @@
     return "smittenwiththemuses.com";
   }
 
-  function albumImage(slug) {
+  function albumImage(slug, title) {
     var img = document.createElement("img");
     var base = "/assets/albums/" + slug;
     img.src = base + ".jpg";
     img.srcset = base + ".jpg 1x, " + base + "@2x.jpg 2x";
     img.width = 48;
     img.height = 48;
-    img.alt = "";
+    img.alt = title ? title.split(" \u2013 ")[0].split(" – ")[0] + " album cover" : "";
     img.decoding = "async";
     return img;
   }
@@ -183,7 +184,7 @@
       note.textContent = "You're here";
       copy.appendChild(title);
       copy.appendChild(note);
-      row.appendChild(albumImage(album.slug));
+      row.appendChild(albumImage(album.slug, album.title));
       row.appendChild(copy);
       item.appendChild(row);
     } else {
@@ -191,7 +192,7 @@
       albumLink.href = album.href;
       albumLink.target = "_blank";
       albumLink.rel = "noopener";
-      albumLink.appendChild(albumImage(album.slug));
+      albumLink.appendChild(albumImage(album.slug, album.title));
       albumLink.appendChild(title);
       item.appendChild(albumLink);
     }
