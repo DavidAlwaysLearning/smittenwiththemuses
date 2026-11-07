@@ -75,51 +75,18 @@
   }, true);
 })();
 
-/* Site menu. Add a destination by appending one entry. The open menu lists every other destination. Subscribe confirmation and thank-you pages are not destinations. */
+/* Site menu. Same destinations on every page: About, Scores, Subscribe, then the eight albums.
+   Subscribe confirmation is not a destination. The only page-specific mark is "You're here" on this album. */
 (function () {
   var pages = [
-    { href: "/", label: "Album" },
-    { href: "https://music.apple.com/us/album/smitten-with-the-muses/839652860?ls=1", label: "Apple Music", blank: true },
-    { href: "https://open.spotify.com/album/4dFca0jJcTbgbZEPO2EU0A", label: "Spotify", blank: true },
-    { href: "https://music.amazon.com/albums/B00IZGE5PM", label: "Amazon Music", blank: true },
-    { href: "https://www.facebook.com/pianoincolors", label: "Facebook", blank: true, ariaLabel: "David and his Piano on Facebook" },
-    { href: "https://www.instagram.com/pianodavid1492/", label: "Instagram", blank: true, ariaLabel: "David Rivera on Instagram" },
+    { href: "https://lackadaisicalperfection.com/about/", label: "About", blank: true },
     { href: "https://lackadaisicalperfection.com/scores/", label: "Scores", blank: true },
-    { href: "https://lackadaisicalperfection.com/about/", label: "About", blank: true }
+    { href: "https://lackadaisicalperfection.com/subscribe/", label: "Subscribe", blank: true }
   ];
-
-  function normalize(path) {
-    var p = path || "/";
-    var base = location.origin && location.origin !== "null"
-      ? location.origin
-      : "https://smittenwiththemuses.com";
-    try {
-      p = new URL(p, base).pathname;
-    } catch (err) {
-      p = "/";
-    }
-    if (p === "/index.html" || p.slice(-11) === "/index.html") {
-      p = p.slice(0, -10);
-    }
-    if (p.charAt(p.length - 1) !== "/") p += "/";
-    return p;
-  }
-
-  function isConfirmation(path) {
-    return /\/(confirmed|thank-you|thanks)\/$/.test(path);
-  }
 
   function reducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
-
-  var here = normalize(location.pathname);
-  var links = pages.filter(function (page) {
-    var path = normalize(page.href);
-    if (isConfirmation(path)) return false;
-    if (page.blank) return true;
-    return path !== here;
-  });
 
   var button = document.createElement("button");
   button.type = "button";
@@ -139,7 +106,7 @@
 
   var list = document.createElement("ul");
   list.setAttribute("role", "list");
-  links.forEach(function (page) {
+  pages.forEach(function (page) {
     var item = document.createElement("li");
     var link = document.createElement("a");
     link.href = page.href;
@@ -153,7 +120,7 @@
     list.appendChild(item);
   });
 
-  /* Newest first, from each album's release year. Titles and domains come from each album repo. */
+  /* Newest first. This album is not a link. The other albums open their homepages in a new tab. */
   var albums = [
     { title: "Lackadaisical Perfection", href: "https://lackadaisicalperfection.com/", host: "lackadaisicalperfection.com", slug: "lackadaisical-perfection" },
     { title: "Piano Reveries and Phantasies", href: "https://pianoreveries.com/", host: "pianoreveries.com", slug: "piano-reveries-and-phantasies" },
@@ -162,7 +129,7 @@
     { title: "Clean Calm Piano", href: "https://cleancalmpiano.com/", host: "cleancalmpiano.com", slug: "clean-calm-piano" },
     { title: "Tantalizing Proof", href: "https://tantalizingproof.com/", host: "tantalizingproof.com", slug: "tantalizing-proof" },
     { title: "Piano In Colors", href: "https://pianoincolors.com/", host: "pianoincolors.com", slug: "piano-in-colors" },
-    { title: "Melodic Subtlety – Piano", href: "https://melodicsubtlety.com/", host: "melodicsubtlety.com", slug: "melodic-subtlety" }
+    { title: "Melodic Subtlety", href: "https://melodicsubtlety.com/", host: "melodicsubtlety.com", slug: "melodic-subtlety" }
   ];
 
   function currentAlbumHost() {
