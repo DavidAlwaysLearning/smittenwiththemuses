@@ -2,8 +2,8 @@
    Computers keep opening them in a new window. Runs on its own, before the menu code, and also catches
    links the menu adds later (checked again at tap time). */
 (function () {
-  var stores = ["open.spotify.com", "music.apple.com", "music.youtube.com", "soundcloud.com"];
-  var redirects = ["/spotify/", "/apple/", "/youtube-music/"];
+  var stores = ["open.spotify.com", "music.apple.com", "music.amazon.com", "music.youtube.com", "soundcloud.com"];
+  var redirects = ["/spotify/", "/apple/", "/amazon/", "/youtube-music/"];
   /* David's YouTube channel (not single videos): opens the app on phones like the stores. */
   var channels = ["/channel/ucdqz1e9ur4phyneylnmjdg", "/@melodicsubtlety", "/@relaxinginstrumentalvideos"];
 
@@ -81,6 +81,7 @@
     { href: "/", label: "Album" },
     { href: "https://music.apple.com/us/album/smitten-with-the-muses/839652860?ls=1", label: "Apple Music", blank: true },
     { href: "https://open.spotify.com/album/4dFca0jJcTbgbZEPO2EU0A", label: "Spotify", blank: true },
+    { href: "https://music.amazon.com/albums/B00IZGE5PM", label: "Amazon Music", blank: true },
     { href: "https://www.facebook.com/pianoincolors", label: "Facebook", blank: true, ariaLabel: "David and his Piano on Facebook" },
     { href: "https://www.instagram.com/pianodavid1492/", label: "Instagram", blank: true, ariaLabel: "David Rivera on Instagram" },
     { href: "https://lackadaisicalperfection.com/scores/", label: "Scores", blank: true },
